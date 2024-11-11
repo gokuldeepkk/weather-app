@@ -6,6 +6,8 @@ import forecast from './utils/forecast.js';
 import geocode from './utils/geocode.js';
 
 const app = express();
+const port = process.env.PORT || 4000;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const publicDirectory = path.join(__dirname, '../public');
@@ -77,6 +79,6 @@ app.get('*', (req, res) => {
     })
 });
 
-app.listen(4000, () => {
-    console.log('Server running on Port 4000');
+app.listen(port, () => {
+    console.log('Server running on port ' + port);
 })
