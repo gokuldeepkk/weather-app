@@ -28,6 +28,7 @@ weatherForm.addEventListener('submit', (event) => {
                     <span>${data.description}</span>
                 </div>
                 <p>Temperature is ${data.temperature}, and feels like ${data.feelslike}<\p>
+                <p>The humidity is ${data.humidity}%.</p>
                 </div>`;
             }
         })

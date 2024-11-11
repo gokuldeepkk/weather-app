@@ -23,7 +23,7 @@ hbs.registerPartials(partialsDirectory);
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        description: 'Forecast Made Easy'
+        description: 'Enter city name and search to find today\'s forecast.'
     })
 });
 
