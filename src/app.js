@@ -65,13 +65,15 @@ app.get('/weather', (req, res) => {
 //Not found Page Handling
 app.get('/help/*', (req, res) => {
     res.render('not-found', {
-        title: 'Help Article Page Not Found'
+        title: '404',
+        errorMessage: 'Help Article Page Not Found'
     })
 });
 
 app.get('*', (req, res) => {
     res.render('not-found', {
-        title: '404 Error - Page Not Found'
+        title: '404',
+        errorMessage: '404 Error - Page Not Found'
     })
 });
 
