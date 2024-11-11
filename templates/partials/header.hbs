@@ -2,8 +2,24 @@
     <h1>{{title}}</h1>
 
     <div>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/help">Help</a>
+        <span class="nav-item active"><a href="/">Home</a></span>
+        <span class="nav-item"><a href="/about">About</a></span>
+        <span class="nav-item"><a href="/help">Help</a></span>
     </div>
 </header>
+<script>
+    const navItems = document.getElementsByClassName('nav-item');
+    const setActive = function () {
+        const path = window.location.href;
+        var current = document.querySelector(".active");
+        if(current) {
+            current.classList.remove('active');
+        }
+        for(let navItem of navItems) {
+            if(navItem.children[0].href === path) {
+                navItem.classList.add('active');
+            }
+        }
+    };
+    window.onload = setActive;
+</script>

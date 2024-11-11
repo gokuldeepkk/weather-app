@@ -16,6 +16,7 @@ footer {
     margin-bottom: 0;
     color: #9e9e9e;
     text-align: center;
+    margin-top: 3em;
 }
 
 h1 {
@@ -38,6 +39,11 @@ header a {
 
 header a:hover {
     color: #333;
+}
+
+.nav-item.active a {
+    color: #26246fad;
+    font-weight: 600;
 }
 
 .main-content {
